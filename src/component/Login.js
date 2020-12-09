@@ -3,11 +3,12 @@ import { Button } from '@material-ui/core';
 import styled from 'styled-components';
 
 import Pingu from '../assets/penguin.svg';
+import { auth, provider } from '../firebase/firebase';
 
 const Login = () => {
 
     const signInHandler = () => {
-        //login to firebase
+        auth.signInWithPopup(provider).catch(err => alert(err.message));
     }
     return (
         <LoginContainer>
