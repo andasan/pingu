@@ -1,11 +1,20 @@
 import React from 'react'
+import styled from 'styled-components';
+
+import SideBar from './SideBar';
+import Chat from './Chat';
 
 const Main = () => {
     return (
-        <div>
-            Welcome!
-        </div>
+        <MainContainer>
+            <SideBar />
+            <Chat />
+        </MainContainer>
     )
 }
 
-export default Main
+export default Main;
+
+const MainContainer = styled.div`
+    display: flex;
+`;
